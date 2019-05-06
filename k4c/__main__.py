@@ -6,8 +6,8 @@ import subprocess
 
 # Custom module here
 
-from core import pstr
-from core import function
+from . import interface
+from . import function
 
 
 def main():
@@ -16,16 +16,16 @@ def main():
     '''
 
     if os.geteuid() != 0:
-        print('\033[1;31mThis program must be run as root! Aborting.\033[1;m')
+        print('\033[1;31mThis program must be run as root! Aborting.\033[1;m\n')
         sys.exit(1)
 
     try:
         # Init the apt sources.list
         function.init_apt()
         # Print logo
-        pstr.plogo()
+        interface.plogo()
         # Into loop
-        function.loop_1()
+        function.loop()
     except KeyboardInterrupt:
         print('\033[1;31mExit...Goodbye...\033[1;m')
         if os.path.exists('/etc/apt/sources.list.bak'):
@@ -51,7 +51,7 @@ def main():
                     error_output))
 
             print(
-                '\n\n\033[1;31m\nAll kali linux repositories have been deleted !\n\033[1;m')
+                '\n\n\033[1;31m\nAll Kali repositories have been deleted !\n\033[1;m')
 
 
 if __name__ == "__main__":
