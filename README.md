@@ -1,171 +1,98 @@
 # katoolin for China
+
+## What can this code do
+
 - Automatically install all Kali tools for Chinese user where visited the kali.org slowly.
-- I also rewrote a list of functions and collation tools.
+
+- Also, I rewrote a list of functions and collation tools.
+
 - So there will be a lot of differences with the original version.
+
 - The new version uses a very convenient pip3 to install the program.
 
-[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 ## Support the legitimate rights and interests of programmers
 
-[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+Supporting the 996 prohibited license while not violating the GPLv2.0 license.
 
-[![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
+[![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html) [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu) [![LICENSE](https://img.shields.io/badge/license-NPL%20(The%20996%20Prohibited%20License)-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
-```
- $$\   $$\             $$\                         $$\ $$\
- $$ | $$  |            $$ |                        $$ |\__|
- $$ |$$  /  $$$$$$\  $$$$$$\    $$$$$$\   $$$$$$\  $$ |$$\ $$$$$$$\
- $$$$$  /   \____$$\ \_$$  _|  $$  __$$\ $$  __$$\ $$ |$$ |$$  __$$\
- $$  $$<    $$$$$$$ |  Kali tools installer |$$ |$$ |$$ |  $$ |
- $$ |\$$\  $$  __$$ |  $$ |$$\ $$ |  $$ |$$ |  $$ |$$ |$$ |$$ |  $$ |
- $$ | \$$\ \$$$$$$$ |  \$$$$  |\$$$$$$  |\$$$$$$  |$$ |$$ |$$ |  $$ |
- \__|  \__| \_______|   \____/  \______/  \______/ \__|\__|\__|  \__|
+## Requirements
 
+- Python 3.5 or later.
+- pip3 for Python3.
+- An Debian and its derivatives operating system.
+- Not supprot CentOS or RedHat or Fedora.
 
-               $$\                          $$$$$$$\ $$\
-              $$  |                        $$ ______|$$ |     $$\
-             $$  /_           $$    $$\   $$ /       $$ \     \__|         $$$$$$$\
-          $$$$$$$  | $$$$$$\  $$\ $$ /    $$ |       $$$$$$\  $$\ $$$$$$ \ \_____$$\
-            $$  __/ $$    $$\ $$$$ _/     $$ \       $$\__$$\ $$ |$$\__$$ | $$$$$$$ |
-            $$ |    $$    $$ |$$  /       \$$ \      $$ | $$ |$$ |$$ | $$ |$$    $$ |
-            $$ |    \$$$$$$$ |$$ |         \$$$$$$$$\$$ | $$ |$$ |$$ | $$ |\$$$$$$$ |
-            \__|     \_______|\__|          \_______|\__| \__|\__|\__|  \_| \_______| 
-```
+## Tested Distribution
 
-![k4c](https://github.com/rikonaka/katoolin4china/blob/master/pic/howtouse.gif)
+Distribution that have been tested and test videos will put here.
 
-# Requirements
-- Python 3.5 or later
-- pip for Python3
-- An operating system (tested on Ubuntu, but not tested on Debian)
-- Not supprot CentOS or Redhat or Fedora
+- ~~Ubuntu12.04~~ (Not support, too old)
+- ~~Ubuntu14.04~~ (Not support, too old)
+- Ubuntu16.04 (![test video](xxxxxxxxxxxxxxxxxxx))
+- Ubuntu18.04 (![test video](xxxxxxxxxxxxxxxxxxx))
+- Ubuntu18.10 (![test video](xxxxxxxxxxxxxxxxxxx))
+- Ubuntu19.04 (![test video](xxxxxxxxxxxxxxxxxxx))
 
-# Installation
-- Here is a simple installation way use the pip
+## Installation
 
-```
+Here is a simple installation way use the pip
+
+![how to install](pic/howtouse.gif)
+
+```bash
 sudo apt-get install git
 git clone https://github.com/rikonaka/katoolin4china.git
 cd katoolin4china
 sudo pip3 install .
 ```
 
-- After this command, the k4c will installed in you system
+After this command, the `k4c` will installed in you system
 
-# Uninstallation
-- Here is a simple uninstallation way
+## Uninstallation
 
-```
-sudo pip3 uninstall katoolin4china
+Here is a simple uninstallation way
+
+```bash
+sudo pip3 uninstall k4c
 rm -rf katoolin4china/
 ```
 
-# Use-The-Tool
-- Just input the k4c like this
+## Usage
 
-```
+Just run `k4c` as root like this
+
+```bash
 sudo k4c
 ```
 
-# Upgrade
+## Upgrade
 
-```
+```bash
 cd katoolin4china/
 git pull
 sudo pip3 install --upgrade .
 ```
 
-# Not-Support-Tool-List
+## Not Support Tool List
 
-- Some software is no longer included in the latest version of the Kail
-- So we will NOT install it into you system(actually we also cound't found it '.deb' package)
-- But you can see at https://tools.kali.org/tools-listing
+Some software is no longer included in the latest version of the Kail.
 
-### - Information Gathering
+So we will NOT install it into you system (actually we also cound't found it's .deb package).
 
-```
-bing-ip2hosts
-ntop
-```
+But you can see them at `https://tools.kali.org/tools-listing` (because the maintenance staff of the Kali website is lazy).
 
-### - Vulnerability Analysis
-```
-commix
-DBPwAudit
-GSD
-Inguma
-```
+If you want the technical information detail, please visit https://rikonaka.github.io/katoolin4china/.
 
-### - Wireless Attack
-```
-BlueMaho
-Bluepot
-Gqrx
-gr-scan
-```
+## Warning
 
-### - Web Applications
-```
-Cutycapt
-Webshag
-WebSlayer
-```
+Before upgrade your system, please make sure you have removed all Kali-linux repositories in you `/etc/apt/sources.list`.
 
-### - Sniffing & Spoofing
-```
-isr-svilgrade
-```
+## Have questions
 
-### - Exploitation Tools
-```
-Nishange
-```
+- Please visit ![issues](https://github.com/rikonaka/katoolin4china/issues).
 
-### - Forensics Tools
-```
-Capstone
-DFF
-diStorm3
-RegRipper
-```
-
-### - Stress Testing
-```
-Inundator
-```
-
-### - Password Attacks
-```
-DBPwAudit
-THC-Hydra
-phrasendrescher
-SQLdict
-```
-
-### - Extra
-```
-Wifresti
-```
-
-# Video
-- Not have yet
-
-# Usage
-- Typing the number of a tool will install it
-- Typing 0 will install all Kali tools
-- By installing armitage , you will install metasploit
-
-# Hotkey
-- back : Go back
-- home : Go to the main menu
-
-# Warning
-- Before upgrade your system , please make sure you have removed all Kali-linux repositories in you /etc/apt/sources.list.
-
-# Have questions?
-- Please visit https://github.com/rikonaka/katoolin4china/issues
-
-# Feature
+## Feature
 
 - [x] Python3 and pip3 support.
 
@@ -173,4 +100,4 @@ Wifresti
 
 - [ ] Graphical interface implementation.
 
-- [ ] Remove installed kali package.
+- [ ] Check installed kali package.
